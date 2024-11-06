@@ -8,11 +8,13 @@ const AdminPage = () => {
 	return (
 		<div className="flex p-4 gap-4 flex-col md:flex-row">
 			{/* LEFT */}
-			<div className="w-full lg:w-2/3 flex flex-col gap-8">
+			{/* aqui he clonado el div original para ver los cambios */}
+			{/* <div className="w-full lg:w-2/3 flex flex-col gap-8"> */}
+			<div className="w-full lg:w-full flex flex-col gap-8">
 				{/* USER CARDS */}
 				<div className="flex gap-4 justify-between flex-wrap">
 					<UserCard type="patient" />
-					<UserCard type="doctor" />
+					<UserCard type="historias" />
 				</div>
 				{/* MIDDLE CHART */}
 				<div className="flex gap-4 flex-col lg:flex-row">
@@ -31,7 +33,8 @@ const AdminPage = () => {
 				</div>
 			</div>
 			{/* RIGHT */}
-			<div className="w-full lg:w-1/3 flex flex-col gap-8">
+			{/* aqui reemplazo flex por hidden */}
+			<div className="hidden w-full lg:w-1/3 flex-col gap-8">
 				<EventCalendar />
 			</div>
 		</div>
