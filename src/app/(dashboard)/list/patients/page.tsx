@@ -30,8 +30,8 @@ const columns = [
 		accessor: 'info',
 	},
 	{
-		header: 'Cedula',
-		accessor: 'ci',
+		header: 'Email',
+		accessor: 'email',
 		className: 'hidden md:table-cell',
 	},
 	{
@@ -81,10 +81,11 @@ const PatientListPage = () => {
 						<h3 className="font-semibold">{item.lastName1}</h3>
 						<h3 className="font-semibold">{item.lastName2}</h3>
 					</div>
-					<p className="text-xs text-gray-500">{item?.email}</p>
+					{/* <p className="text-xs text-gray-500">{item?.email}</p> */}
+					<p className="text-xs text-gray-500">{item.ci}</p>
 				</div>
 			</td>
-			<td className="hidden md:table-cell">{item.ci}</td>
+			<td className="hidden md:table-cell">{item?.email}</td>
 			<td className="hidden xl:table-cell">{item.birthday}</td>
 			<td className="hidden md:table-cell">{item.cel}</td>
 			<td className="hidden lg:table-cell">{item.tel}</td>
